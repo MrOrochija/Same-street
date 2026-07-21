@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7aa92d78f5e3a2d44be627b791d1414a
+guid: affe49a52922d0e44b93b93c9c56ffb0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -250025697375416445
-    second: tumba2_0
+      213: -8910994646093789147
+    second: batareya_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tumba2_0
+      name: batareya_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 16
+        width: 28
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 38f0833f3fab78cf0800000000000000
-      internalID: -250025697375416445
+      spriteID: 5280c24f499c55480800000000000000
+      internalID: -8910994646093789147
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      tumba2_0: -250025697375416445
+      batareya_0: -8910994646093789147
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
