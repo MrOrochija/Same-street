@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 93577c685afd00948ac2e283f6bc758c
+guid: 2c128a3ac8144904b9453a89a0202e8b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5386467143579382524
-    second: home_outside_0
+      213: 632301620031758097
+    second: woman3_0
+  - first:
+      213: -3542254617302284712
+    second: woman3_1
+  - first:
+      213: -878159273675008974
+    second: woman3_2
+  - first:
+      213: 3217117345995466591
+    second: woman3_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 8
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -126,13 +135,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: home_outside_0
+      name: woman3_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 3
         y: 0
-        width: 50
-        height: 50
+        width: 36
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +150,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cf2bc5f045390ca40800000000000000
-      internalID: 5386467143579382524
+      spriteID: 11f95ec29f266c800800000000000000
+      internalID: 632301620031758097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: woman3_1
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 0
+        width: 27
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 856c5b7713267dec0800000000000000
+      internalID: -3542254617302284712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: woman3_2
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 0
+        width: 27
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 234d2641bc620d3f0800000000000000
+      internalID: -878159273675008974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: woman3_3
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 0
+        width: 27
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f57aec06e2f75ac20800000000000000
+      internalID: 3217117345995466591
       vertices: []
       indices: 
       edges: []
@@ -161,7 +236,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      home_outside_0: 5386467143579382524
+      woman3_0: 632301620031758097
+      woman3_1: -3542254617302284712
+      woman3_2: -878159273675008974
+      woman3_3: 3217117345995466591
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,64 @@
 fileFormatVersion: 2
-guid: 60a28b64506d17f439a7b7a0ea95d09c
+guid: 5f3615ec09ce3cc4394a17803e5c15fd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1909966874015377143
-    second: strreet-sheet_0
+      213: 5334759464859404885
+    second: chel8-sheet_0
+  - first:
+      213: -1491291098357778721
+    second: chel8-sheet_1
+  - first:
+      213: -4368052789927668912
+    second: chel8-sheet_2
+  - first:
+      213: 7835435123786562665
+    second: chel8-sheet_3
+  - first:
+      213: -1501384668568849690
+    second: chel8-sheet_4
+  - first:
+      213: -5595060428460183879
+    second: chel8-sheet_5
+  - first:
+      213: -8078525636596716379
+    second: chel8-sheet_6
+  - first:
+      213: -8716659938956027691
+    second: chel8-sheet_7
+  - first:
+      213: 4974208122948742872
+    second: chel8-sheet_8
+  - first:
+      213: -815860137092538330
+    second: chel8-sheet_9
+  - first:
+      213: -3778289664782146972
+    second: chel8-sheet_10
+  - first:
+      213: -7135237641743113458
+    second: chel8-sheet_11
+  - first:
+      213: 671638575118247105
+    second: chel8-sheet_12
+  - first:
+      213: 9222797660664659960
+    second: chel8-sheet_13
+  - first:
+      213: -898198782030650058
+    second: chel8-sheet_14
+  - first:
+      213: 3794415186658685666
+    second: chel8-sheet_15
+  - first:
+      213: 8126662655026480535
+    second: chel8-sheet_16
+  - first:
+      213: -4949632824753473977
+    second: chel8-sheet_17
+  - first:
+      213: -5033684740556782952
+    second: chel8-sheet_18
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +91,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +105,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -126,375 +180,419 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: strreet-sheet_0
+      name: chel8-sheet_0
       rect:
         serializedVersion: 2
-        x: 16
+        x: 0
         y: 0
-        width: 16
-        height: 16
+        width: 27
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 909dc8d5f3f6e75e0800000000000000
-      internalID: -1909966874015377143
+      spriteID: 55a0911f77fd80a40800000000000000
+      internalID: 5334759464859404885
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: strreet-sheet_1
+      name: chel8-sheet_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 31
         y: 0
-        width: 16
-        height: 16
+        width: 28
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 85ca49c9782fad243be2f44b992e9bab
-      internalID: 1687651929
+      spriteID: fd6bea1b5aedd4be0800000000000000
+      internalID: -1491291098357778721
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: strreet-sheet_2
+      name: chel8-sheet_2
       rect:
         serializedVersion: 2
-        x: 48
+        x: 63
         y: 0
-        width: 16
-        height: 16
+        width: 28
+        height: 31
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 3137d07c6ba7f0f4f82cfc856b9aa1c0
-      internalID: 1557322348
+      spriteID: 0531538612f8163c0800000000000000
+      internalID: -4368052789927668912
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: strreet-sheet_3
+      name: chel8-sheet_3
       rect:
         serializedVersion: 2
-        x: 64
+        x: 95
         y: 0
-        width: 16
-        height: 16
+        width: 28
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 512898b0b368a9a45b18cb57f419a558
-      internalID: 1187126500
+      spriteID: 96cbaed2bbe0dbc60800000000000000
+      internalID: 7835435123786562665
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: strreet-sheet_4
+      name: chel8-sheet_4
       rect:
         serializedVersion: 2
-        x: 80
+        x: 127
         y: 0
-        width: 16
-        height: 16
+        width: 28
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: a06ae064d1dd27740958a40fb669ea9b
-      internalID: -1174573620
+      spriteID: 6e27cbe39920a2be0800000000000000
+      internalID: -1501384668568849690
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: strreet-sheet_5
+      name: chel8-sheet_5
       rect:
         serializedVersion: 2
-        x: 96
+        x: 159
         y: 0
-        width: 16
-        height: 16
+        width: 28
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: f570611aa00303a4aa4d052cc4d77a44
-      internalID: -384844241
+      spriteID: 9be29c82f2a5a52b0800000000000000
+      internalID: -5595060428460183879
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: strreet-sheet_6
+      name: chel8-sheet_6
       rect:
         serializedVersion: 2
-        x: 112
+        x: 191
         y: 0
-        width: 16
-        height: 16
+        width: 28
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: dbc925d1a86591b4bb8e156fd5dcc559
-      internalID: 866475649
+      spriteID: 5ac24c14cbf43ef80800000000000000
+      internalID: -8078525636596716379
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: strreet-sheet_7
+      name: chel8-sheet_7
       rect:
         serializedVersion: 2
-        x: 128
+        x: 223
         y: 0
-        width: 16
-        height: 16
+        width: 28
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: fe1a39f1941e142468608dd7d8df3c0c
-      internalID: -168557415
+      spriteID: 5d8d5a6e7f3380780800000000000000
+      internalID: -8716659938956027691
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: strreet-sheet_8
+      name: chel8-sheet_8
       rect:
         serializedVersion: 2
-        x: 144
+        x: 255
         y: 0
-        width: 16
-        height: 16
+        width: 28
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 621d855924e62bd41ab021712d89d154
-      internalID: -1903568853
+      spriteID: 8dee83feeefe70540800000000000000
+      internalID: 4974208122948742872
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: strreet-sheet_9
+      name: chel8-sheet_9
       rect:
         serializedVersion: 2
-        x: 160
+        x: 287
         y: 0
-        width: 16
-        height: 16
+        width: 28
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: a5fc280bc32fcf24da322a0d55c38621
-      internalID: -1532244758
+      spriteID: 620a236278b7da4f0800000000000000
+      internalID: -815860137092538330
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: strreet-sheet_10
+      name: chel8-sheet_10
       rect:
         serializedVersion: 2
-        x: 176
+        x: 319
         y: 0
-        width: 16
-        height: 16
+        width: 28
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 8d04facfd0e08a244a5e8020450d1927
-      internalID: 1194908037
+      spriteID: 46261207191d09bc0800000000000000
+      internalID: -3778289664782146972
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: strreet-sheet_11
+      name: chel8-sheet_11
       rect:
         serializedVersion: 2
-        x: 192
+        x: 351
         y: 0
-        width: 16
-        height: 16
+        width: 28
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 1a80f67b7ca160949abb95cd3ec98193
-      internalID: -1640190420
+      spriteID: e03e7ef3b2b8afc90800000000000000
+      internalID: -7135237641743113458
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: strreet-sheet_12
+      name: chel8-sheet_12
       rect:
         serializedVersion: 2
-        x: 208
+        x: 389
         y: 0
-        width: 16
-        height: 16
+        width: 28
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: e5b951794f2edae48b417c43299344f4
-      internalID: 395160856
+      spriteID: 1c46f5fb9b3225900800000000000000
+      internalID: 671638575118247105
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: strreet-sheet_13
+      name: chel8-sheet_13
       rect:
         serializedVersion: 2
-        x: 224
+        x: 421
         y: 0
-        width: 16
-        height: 16
+        width: 28
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: dc62dd4863af6c64a907156a3d8902d6
-      internalID: 2064787430
+      spriteID: 8ff783f9b95fdff70800000000000000
+      internalID: 9222797660664659960
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: strreet-sheet_14
+      name: chel8-sheet_14
       rect:
         serializedVersion: 2
-        x: 240
+        x: 453
         y: 0
-        width: 16
-        height: 16
+        width: 28
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 09a93689c7d6caa4eab114885752dcfa
-      internalID: 1297740831
+      spriteID: 635ef5377f4f883f0800000000000000
+      internalID: -898198782030650058
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: strreet-sheet_15
+      name: chel8-sheet_15
       rect:
         serializedVersion: 2
-        x: 256
+        x: 485
         y: 0
-        width: 16
-        height: 16
+        width: 54
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 23df086b8a05d644592adf839ffcb15f
-      internalID: -717498598
+      spriteID: 2e27323328878a430800000000000000
+      internalID: 3794415186658685666
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: strreet-sheet_16
+      name: chel8-sheet_16
       rect:
         serializedVersion: 2
-        x: 272
+        x: 543
         y: 0
-        width: 16
-        height: 16
+        width: 28
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 5bfc2cb3b70d64f48adf930456079cc8
-      internalID: -2109658233
+      spriteID: 795494ab0a4b7c070800000000000000
+      internalID: 8126662655026480535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chel8-sheet_17
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 0
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 746b4ff8b2f5f4bb0800000000000000
+      internalID: -4949632824753473977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chel8-sheet_18
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 0
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8920fc7e562c42ab0800000000000000
+      internalID: -5033684740556782952
       vertices: []
       indices: 
       edges: []
@@ -503,7 +601,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: eaa22b9fa6fbb874dbf5e25600b7894e
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -511,27 +609,27 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      strreet-sheet_0: -1909966874015377143
-      strreet-sheet_1: 1687651929
-      strreet-sheet_10: 1194908037
-      strreet-sheet_11: -1640190420
-      strreet-sheet_12: 395160856
-      strreet-sheet_13: 2064787430
-      strreet-sheet_14: 1297740831
-      strreet-sheet_15: -717498598
-      strreet-sheet_16: -2109658233
-      strreet-sheet_2: 1557322348
-      strreet-sheet_3: 1187126500
-      strreet-sheet_4: -1174573620
-      strreet-sheet_5: -384844241
-      strreet-sheet_6: 866475649
-      strreet-sheet_7: -168557415
-      strreet-sheet_8: -1903568853
-      strreet-sheet_9: -1532244758
+      chel8-sheet_0: 5334759464859404885
+      chel8-sheet_1: -1491291098357778721
+      chel8-sheet_10: -3778289664782146972
+      chel8-sheet_11: -7135237641743113458
+      chel8-sheet_12: 671638575118247105
+      chel8-sheet_13: 9222797660664659960
+      chel8-sheet_14: -898198782030650058
+      chel8-sheet_15: 3794415186658685666
+      chel8-sheet_16: 8126662655026480535
+      chel8-sheet_17: -4949632824753473977
+      chel8-sheet_18: -5033684740556782952
+      chel8-sheet_2: -4368052789927668912
+      chel8-sheet_3: 7835435123786562665
+      chel8-sheet_4: -1501384668568849690
+      chel8-sheet_5: -5595060428460183879
+      chel8-sheet_6: -8078525636596716379
+      chel8-sheet_7: -8716659938956027691
+      chel8-sheet_8: 4974208122948742872
+      chel8-sheet_9: -815860137092538330
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

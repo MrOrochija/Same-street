@@ -1,10 +1,67 @@
 fileFormatVersion: 2
-guid: 60a28b64506d17f439a7b7a0ea95d09c
+guid: dab06fa167d1fab4f8e520a8ad40774a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1909966874015377143
-    second: strreet-sheet_0
+      213: -3938408722033731490
+    second: woman2_0
+  - first:
+      213: -2334940960291868723
+    second: woman2_1
+  - first:
+      213: -7854042545981667404
+    second: woman2_2
+  - first:
+      213: 3101555049302844107
+    second: woman2_3
+  - first:
+      213: 8810330662931801054
+    second: woman2_4
+  - first:
+      213: 8272753934291893859
+    second: woman2_5
+  - first:
+      213: -2619994725020823713
+    second: woman2_6
+  - first:
+      213: -2882535892801561236
+    second: woman2_7
+  - first:
+      213: -8317620897653891991
+    second: woman2_8
+  - first:
+      213: 4271557678269564060
+    second: woman2_9
+  - first:
+      213: -2802745063620241391
+    second: woman2_10
+  - first:
+      213: -2164278039869443808
+    second: woman2_11
+  - first:
+      213: -5348673935255257976
+    second: woman2_12
+  - first:
+      213: 7608301049298914796
+    second: woman2_13
+  - first:
+      213: -8986936272227124264
+    second: woman2_14
+  - first:
+      213: 4029589701965450347
+    second: woman2_15
+  - first:
+      213: -2223556340200708563
+    second: woman2_16
+  - first:
+      213: 8951797561468895765
+    second: woman2_17
+  - first:
+      213: -5017506221626653580
+    second: woman2_18
+  - first:
+      213: 3665327123115342370
+    second: woman2_19
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +94,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +108,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -126,375 +183,441 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: strreet-sheet_0
+      name: woman2_0
       rect:
         serializedVersion: 2
-        x: 16
+        x: 0
         y: 0
-        width: 16
-        height: 16
+        width: 29
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 909dc8d5f3f6e75e0800000000000000
-      internalID: -1909966874015377143
+      spriteID: e5811e64226f759c0800000000000000
+      internalID: -3938408722033731490
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: strreet-sheet_1
+      name: woman2_1
       rect:
         serializedVersion: 2
         x: 32
         y: 0
-        width: 16
-        height: 16
+        width: 29
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 85ca49c9782fad243be2f44b992e9bab
-      internalID: 1687651929
+      spriteID: dcf2b42519f989fd0800000000000000
+      internalID: -2334940960291868723
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: strreet-sheet_2
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3137d07c6ba7f0f4f82cfc856b9aa1c0
-      internalID: 1557322348
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: strreet-sheet_3
+      name: woman2_2
       rect:
         serializedVersion: 2
         x: 64
         y: 0
-        width: 16
-        height: 16
+        width: 29
+        height: 31
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 512898b0b368a9a45b18cb57f419a558
-      internalID: 1187126500
+      spriteID: 4b745fbbae5d00390800000000000000
+      internalID: -7854042545981667404
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: strreet-sheet_4
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a06ae064d1dd27740958a40fb669ea9b
-      internalID: -1174573620
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: strreet-sheet_5
+      name: woman2_3
       rect:
         serializedVersion: 2
         x: 96
         y: 0
-        width: 16
-        height: 16
+        width: 29
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: f570611aa00303a4aa4d052cc4d77a44
-      internalID: -384844241
+      spriteID: bc2e30572efea0b20800000000000000
+      internalID: 3101555049302844107
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: strreet-sheet_6
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dbc925d1a86591b4bb8e156fd5dcc559
-      internalID: 866475649
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: strreet-sheet_7
+      name: woman2_4
       rect:
         serializedVersion: 2
         x: 128
         y: 0
-        width: 16
-        height: 16
+        width: 29
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: fe1a39f1941e142468608dd7d8df3c0c
-      internalID: -168557415
+      spriteID: ed328cd0f05944a70800000000000000
+      internalID: 8810330662931801054
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: strreet-sheet_8
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 621d855924e62bd41ab021712d89d154
-      internalID: -1903568853
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: strreet-sheet_9
+      name: woman2_5
       rect:
         serializedVersion: 2
         x: 160
         y: 0
-        width: 16
-        height: 16
+        width: 29
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: a5fc280bc32fcf24da322a0d55c38621
-      internalID: -1532244758
+      spriteID: 36efeaf4fd9bec270800000000000000
+      internalID: 8272753934291893859
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: strreet-sheet_10
-      rect:
-        serializedVersion: 2
-        x: 176
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8d04facfd0e08a244a5e8020450d1927
-      internalID: 1194908037
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: strreet-sheet_11
+      name: woman2_6
       rect:
         serializedVersion: 2
         x: 192
         y: 0
-        width: 16
-        height: 16
+        width: 29
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 1a80f67b7ca160949abb95cd3ec98193
-      internalID: -1640190420
+      spriteID: f5f8cbdcda8e3abd0800000000000000
+      internalID: -2619994725020823713
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: strreet-sheet_12
-      rect:
-        serializedVersion: 2
-        x: 208
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e5b951794f2edae48b417c43299344f4
-      internalID: 395160856
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: strreet-sheet_13
+      name: woman2_7
       rect:
         serializedVersion: 2
         x: 224
         y: 0
-        width: 16
-        height: 16
+        width: 29
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: dc62dd4863af6c64a907156a3d8902d6
-      internalID: 2064787430
+      spriteID: c6ddf39b0ec2ff7d0800000000000000
+      internalID: -2882535892801561236
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: strreet-sheet_14
+      name: woman2_8
       rect:
         serializedVersion: 2
-        x: 240
+        x: 263
         y: 0
-        width: 16
-        height: 16
+        width: 22
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 09a93689c7d6caa4eab114885752dcfa
-      internalID: 1297740831
+      spriteID: 96c59fabcdfd19c80800000000000000
+      internalID: -8317620897653891991
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: strreet-sheet_15
+      name: woman2_9
       rect:
         serializedVersion: 2
-        x: 256
+        x: 288
         y: 0
-        width: 16
-        height: 16
+        width: 29
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 23df086b8a05d644592adf839ffcb15f
-      internalID: -717498598
+      spriteID: c9489d2a31f974b30800000000000000
+      internalID: 4271557678269564060
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: strreet-sheet_16
+      name: woman2_10
       rect:
         serializedVersion: 2
-        x: 272
+        x: 327
         y: 0
-        width: 16
-        height: 16
+        width: 22
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 5bfc2cb3b70d64f48adf930456079cc8
-      internalID: -2109658233
+      spriteID: 1189fe6d636aa19d0800000000000000
+      internalID: -2802745063620241391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: woman2_11
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 0
+        width: 29
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 021376ee690f6f1e0800000000000000
+      internalID: -2164278039869443808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: woman2_12
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 0
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88c38b5f461b5c5b0800000000000000
+      internalID: -5348673935255257976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: woman2_13
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 0
+        width: 29
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ced81bb6e7d169960800000000000000
+      internalID: 7608301049298914796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: woman2_14
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 0
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8db34d2431df74380800000000000000
+      internalID: -8986936272227124264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: woman2_15
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 0
+        width: 29
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6c0938fb7afbe730800000000000000
+      internalID: 4029589701965450347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: woman2_16
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 29
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d26e44c1a475421e0800000000000000
+      internalID: -2223556340200708563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: woman2_17
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 0
+        width: 29
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 512cf88147c2b3c70800000000000000
+      internalID: 8951797561468895765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: woman2_18
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 29
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47481a1ecac3e5ab0800000000000000
+      internalID: -5017506221626653580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: woman2_19
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 0
+        width: 29
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22af4e6499bddd230800000000000000
+      internalID: 3665327123115342370
       vertices: []
       indices: 
       edges: []
@@ -503,7 +626,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: eaa22b9fa6fbb874dbf5e25600b7894e
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -511,27 +634,28 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      strreet-sheet_0: -1909966874015377143
-      strreet-sheet_1: 1687651929
-      strreet-sheet_10: 1194908037
-      strreet-sheet_11: -1640190420
-      strreet-sheet_12: 395160856
-      strreet-sheet_13: 2064787430
-      strreet-sheet_14: 1297740831
-      strreet-sheet_15: -717498598
-      strreet-sheet_16: -2109658233
-      strreet-sheet_2: 1557322348
-      strreet-sheet_3: 1187126500
-      strreet-sheet_4: -1174573620
-      strreet-sheet_5: -384844241
-      strreet-sheet_6: 866475649
-      strreet-sheet_7: -168557415
-      strreet-sheet_8: -1903568853
-      strreet-sheet_9: -1532244758
+      woman2_0: -3938408722033731490
+      woman2_1: -2334940960291868723
+      woman2_10: -2802745063620241391
+      woman2_11: -2164278039869443808
+      woman2_12: -5348673935255257976
+      woman2_13: 7608301049298914796
+      woman2_14: -8986936272227124264
+      woman2_15: 4029589701965450347
+      woman2_16: -2223556340200708563
+      woman2_17: 8951797561468895765
+      woman2_18: -5017506221626653580
+      woman2_19: 3665327123115342370
+      woman2_2: -7854042545981667404
+      woman2_3: 3101555049302844107
+      woman2_4: 8810330662931801054
+      woman2_5: 8272753934291893859
+      woman2_6: -2619994725020823713
+      woman2_7: -2882535892801561236
+      woman2_8: -8317620897653891991
+      woman2_9: 4271557678269564060
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
