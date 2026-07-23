@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: c337c00b5278abd448f9e6232fe26cf1
+=======
+guid: 939c7e4d627230b44aa6a225b8f3b85e
+>>>>>>> 1b84f76 (remake street + add text typing sound)
 AudioImporter:
   externalObjects: {}
   serializedVersion: 8

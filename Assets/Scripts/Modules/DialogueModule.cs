@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI; 
 
-public class DialogueModule : MonoBehaviour
+public class DialogueModule : SoundsModule
 {
     [SerializeField] private PlayerMovement playerMovement;
 
@@ -282,6 +282,11 @@ public class DialogueModule : MonoBehaviour
         for (int i = 0; i <= totalVisibleCharacters; i++)
         {
             textComponent.maxVisibleCharacters = i;
+
+            if (i > 0 && textComponent.textInfo.characterInfo[i - 1].character != ' ')
+            {
+                PlaySound(sounds[0]);
+            }
 
             float timer = 0f;
             while (timer < 0.03f)
