@@ -65,7 +65,7 @@ public class PlayerInteraction : MonoBehaviour
 
         yield return StartCoroutine(FadeModule.FadeRoutine(fadeImage, 0f));
 
-        if (playerMovement != null && playerMovement.currentState != PlayerState.Combat)
+        if (playerMovement != null)
         {
             playerMovement.currentState = PlayerState.Free;
         }
