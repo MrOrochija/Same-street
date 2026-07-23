@@ -964,7 +964,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueModule
   sounds:
-  - {fileID: 8300000, guid: 1bb129ce5cb55c44aa5b0f24a3c86dd1, type: 3}
+  - {fileID: 8300000, guid: 6665987a0bf5bb74c8306d928f889703, type: 3}
   playerMovement: {fileID: 705356620}
   playerCanvas: {fileID: 1436478579}
   otherCanvas: {fileID: 1699825253}
