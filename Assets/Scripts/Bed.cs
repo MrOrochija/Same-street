@@ -60,8 +60,8 @@ public class PlayerInteraction : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
 
-        playerInfo.days++;
         Debug.Log($"день: {playerInfo.days}");
+        playerInfo.days++;
 
         yield return StartCoroutine(FadeModule.FadeRoutine(fadeImage, 0f));
 

@@ -3,13 +3,14 @@ using System.Collections.Generic;
 
 public class NPCStore : MonoBehaviour
 {
-    public int i = 0;
+    [HideInInspector] public int i = 0;
 
     [System.Serializable]
     public class NumberData
     {
         public int number;
         public bool wait;
+        public bool isPaused;
     }
 
     [System.Serializable]

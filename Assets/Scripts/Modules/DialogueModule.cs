@@ -32,8 +32,7 @@ public class DialogueModule : MonoBehaviour
     private readonly Color colorNormal = new Color32(59, 59, 59, 255);
     private readonly Color colorSpeaking = Color.white;
 
-    private const float AnimationDuration = 0.3f;
-    private const float TextSpeed = 0.03f;
+    public event System.Action OnDialogueFinished;
 
     void Awake()
     {
@@ -155,6 +154,8 @@ public class DialogueModule : MonoBehaviour
         {
             playerMovement.currentState = PlayerState.Free;
         }
+
+        OnDialogueFinished?.Invoke();
     }
 
     private void SetCanvasState(bool state)
@@ -179,10 +180,10 @@ public class DialogueModule : MonoBehaviour
         Color startColor = img.color;
         float timer = 0f;
 
-        while (timer < AnimationDuration)
+        while (timer < 0.3f)
         {
             timer += Time.deltaTime;
-            float t = timer / AnimationDuration;
+            float t = timer / 0.3f;
             
             targetTransform.localScale = Vector3.Lerp(startScale, targetScale, t);
             img.color = Color.Lerp(startColor, targetColor, t);
@@ -202,10 +203,10 @@ public class DialogueModule : MonoBehaviour
         float startAlpha = startColor.a;
         float timer = 0f;
 
-        while (timer < AnimationDuration)
+        while (timer < 0.3f)
         {
             timer += Time.deltaTime;
-            startColor.a = Mathf.Lerp(startAlpha, targetAlpha, timer / AnimationDuration);
+            startColor.a = Mathf.Lerp(startAlpha, targetAlpha, timer / 0.3f);
             backgroundImage.color = startColor;
             yield return null;
         }
@@ -283,7 +284,7 @@ public class DialogueModule : MonoBehaviour
             textComponent.maxVisibleCharacters = i;
 
             float timer = 0f;
-            while (timer < TextSpeed)
+            while (timer < 0.03f)
             {
                 if (Keyboard.current != null && Keyboard.current.spaceKey.wasPressedThisFrame)
                 {

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Sounds : MonoBehaviour
+public class SoundsModule : MonoBehaviour
 {
     public AudioClip[] sounds;
 

@@ -8,7 +8,6 @@ public class DialogueLine
     public Sprite speakerSprite;
     [TextArea(2, 5)]
     public string text;
-    public bool narration;
 }
 
 [CreateAssetMenu(fileName = "NewDialogue", menuName = "Dialogue/Dialogue Data")]

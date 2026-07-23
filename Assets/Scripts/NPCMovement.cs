@@ -9,6 +9,7 @@ public class NPCMovement : MonoBehaviour
 
     private int currentGroupIndex = 0;
     private bool isWaiting = false;
+    public bool isPaused = false;
 
     private Transform currentTargetTransform;
     private NPCStore.NumberData currentTargetData;
@@ -30,9 +31,20 @@ public class NPCMovement : MonoBehaviour
         MoveToNextTarget();
     }
 
+    public void PauseMovement()
+    {
+        isPaused = true;
+        if (anim != null) anim.SetBool("isMoving", false);
+    }
+
+    public void ResumeMovement()
+    {
+        isPaused = false;
+    }
+
     private void Update()
     {
-        if (isWaiting || currentTargetTransform == null)
+        if (isPaused || isWaiting || currentTargetTransform == null)
         {
             if (anim != null) anim.SetBool("isMoving", false);
             return;
@@ -134,6 +146,12 @@ public class NPCMovement : MonoBehaviour
             if (currentTargetData.wait)
             {
                 yield return new WaitForSeconds(5f);
+            }
+
+            if (currentTargetData.isPaused)
+            {
+                isPaused = true;
+                yield return new WaitUntil(() => !isPaused);
             }
 
             currentGroupIndex = currentTargetData.number;
