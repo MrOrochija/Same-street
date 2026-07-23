@@ -56,14 +56,14 @@ public class PlayerInteraction : MonoBehaviour
             playerMovement.currentState = PlayerState.Frozen;
         }
 
-        yield return StartCoroutine(Fade.FadeRoutine(fadeImage, 1f));
+        yield return StartCoroutine(FadeModule.FadeRoutine(fadeImage, 1f));
 
         yield return new WaitForSeconds(1f);
 
         playerInfo.days++;
         Debug.Log($"день: {playerInfo.days}");
 
-        yield return StartCoroutine(Fade.FadeRoutine(fadeImage, 0f));
+        yield return StartCoroutine(FadeModule.FadeRoutine(fadeImage, 0f));
 
         if (playerMovement != null && playerMovement.currentState != PlayerState.Combat)
         {

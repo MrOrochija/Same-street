@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-public static class Fade
+public static class FadeModule
 {
     public static IEnumerator FadeRoutine(Image fadeImage, float targetAlpha)
     {
