@@ -9,7 +9,7 @@ public class NPCMovement : MonoBehaviour
 
     private int currentGroupIndex = 0;
     private bool isWaiting = false;
-    public bool isPaused = false;
+    private bool isPaused = false;
 
     private Transform currentTargetTransform;
     private NPCStore.NumberData currentTargetData;

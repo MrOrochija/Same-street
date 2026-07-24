@@ -3,10 +3,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
 
-public class Bed : MonoBehaviour
+public class TriggerHome : MonoBehaviour
 {
     public Image fadeImage;
-    private PlayerInfo playerInfo;
+    public GameObject exitPos;
     private PlayerMovement playerMovement;
     
     private bool isPlayerInside = false;
@@ -16,13 +16,8 @@ public class Bed : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            playerInfo = other.GetComponent<PlayerInfo>();
             playerMovement = other.GetComponent<PlayerMovement>();
-            
-            if (playerInfo != null)
-            {
-                isPlayerInside = true;
-            }
+            isPlayerInside = true;
         }
     }
 
@@ -31,16 +26,19 @@ public class Bed : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isPlayerInside = false;
-            playerInfo = null;
-            playerMovement = null;
+
+            if (!isInteracting)
+            {
+                playerMovement = null;
+            }
         }
     }
 
     private void Update()
     {
-        if (playerInfo.canSleep && isPlayerInside && !isInteracting && Keyboard.current != null)
+        if (isPlayerInside && !isInteracting && Keyboard.current != null)
         {
-            if (Keyboard.current.eKey.wasPressedThisFrame && playerInfo != null)
+            if (Keyboard.current.eKey.wasPressedThisFrame)
             {
                 StartCoroutine(InteractionRoutine());
             }
@@ -51,25 +49,34 @@ public class Bed : MonoBehaviour
     {
         isInteracting = true;
 
-        if (playerMovement != null)
+        PlayerMovement localPlayer = playerMovement;
+
+        if (localPlayer != null)
         {
-            playerMovement.currentState = PlayerState.Frozen;
+            localPlayer.currentState = PlayerState.Frozen;
         }
 
         yield return StartCoroutine(FadeModule.FadeRoutine(fadeImage, 1f));
 
-        yield return new WaitForSeconds(1f);
+        if (localPlayer != null && exitPos != null)
+        {
+            localPlayer.gameObject.transform.position = exitPos.transform.position;
+        }
 
-        Debug.Log($"день: {playerInfo.days}");
-        playerInfo.days++;
+        yield return new WaitForSeconds(1f);
 
         yield return StartCoroutine(FadeModule.FadeRoutine(fadeImage, 0f));
 
-        if (playerMovement != null)
+        if (localPlayer != null)
         {
-            playerMovement.currentState = PlayerState.Free;
+            localPlayer.currentState = PlayerState.Free;
         }
 
         isInteracting = false;
+        
+        if (!isPlayerInside)
+        {
+            playerMovement = null;
+        }
     }
 }
