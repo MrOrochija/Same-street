@@ -1,12 +1,12 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.InputSystem;
 
 public class YaniNeko : MonoBehaviour
 {
-    public Image fadeImage;
+    [SerializeField] private DialogueModule dialogueModule;
     private PlayerMovement playerMovement;
+    private PlayerInfo playerInfo;
     
     private bool isPlayerInside = false;
     private bool isInteracting = false;
@@ -16,6 +16,7 @@ public class YaniNeko : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerMovement = other.GetComponent<PlayerMovement>();
+            playerInfo = other.GetComponent<PlayerInfo>();
             
             isPlayerInside = true;
         }
@@ -27,6 +28,7 @@ public class YaniNeko : MonoBehaviour
         {
             isPlayerInside = false;
             playerMovement = null;
+            playerInfo = null;
         }
     }
 
@@ -50,13 +52,23 @@ public class YaniNeko : MonoBehaviour
             playerMovement.currentState = PlayerState.Frozen;
         }
 
-        yield return StartCoroutine(FadeModule.FadeRoutine(fadeImage, 1f));
+        DialogueData targetDialogue = GetDialogueForCurrentDayModule.GetDialogue(playerInfo, gameObject);
 
-        
+        if (dialogueModule != null && targetDialogue != null)
+        {
+            dialogueModule.OnDialogueFinished += OnDialogueEnd;
+            dialogueModule.StartDialogue(targetDialogue);
+        }
 
-        yield return new WaitForSeconds(1f);
+        yield break;
+    }
 
-        yield return StartCoroutine(FadeModule.FadeRoutine(fadeImage, 0f));
+    private void OnDialogueEnd()
+    {
+        if (dialogueModule != null)
+        {
+            dialogueModule.OnDialogueFinished -= OnDialogueEnd;
+        }
 
         if (playerMovement != null)
         {

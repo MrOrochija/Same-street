@@ -10,10 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 48fdbf3537146a54d85e28845c879004, type: 3}
-  m_Name: 0day
+  m_Name: 1day
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
-  - speakerName: 
-    speakerSprite: {fileID: 0}
-    text: '*smokes*'
-    isNarrator: 1
+  - speakerName: YaniNeko
+    speakerSprite: {fileID: 632301620031758097, guid: 2c128a3ac8144904b9453a89a0202e8b, type: 3}
+    text: Back off, this is the second time you've shown up.
+    isNarrator: 0
+  - speakerName: Player
+    speakerSprite: {fileID: -6535718206531406139, guid: 06fdfd053eca4b54db118ee618099550, type: 3}
+    text: O-k-kay.
+    isNarrator: 0

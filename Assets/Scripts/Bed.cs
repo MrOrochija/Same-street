@@ -37,8 +37,8 @@ public class Bed : MonoBehaviour
     }
 
     private void Update()
-    {
-        if (playerInfo != null && playerInfo.canSleep && isPlayerInside && !isInteracting && Keyboard.current != null)
+    {   
+        if (playerInfo != null && playerInfo.GetCanSleep() && isPlayerInside && !isInteracting && Keyboard.current != null)
         {
             if (Keyboard.current.eKey.wasPressedThisFrame)
             {
@@ -60,8 +60,8 @@ public class Bed : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
 
-        Debug.Log($"день: {playerInfo.days}");
-        playerInfo.days++;
+        Debug.Log($"день: {playerInfo.GetDays()}");
+        playerInfo.AddDay();
 
         yield return StartCoroutine(FadeModule.FadeRoutine(fadeImage, 0f));
 

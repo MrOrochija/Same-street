@@ -55,7 +55,7 @@ public class CashRegister : MonoBehaviour
             playerMovement.currentState = PlayerState.Frozen;
         }
 
-        DialogueData targetDialogue = GetDialogueForCurrentDay();
+        DialogueData targetDialogue = GetDialogueForCurrentDayModule.GetDialogue(playerInfo, nPCMovement.gameObject);
 
         if (dialogueModule != null && targetDialogue != null)
         {
@@ -66,23 +66,6 @@ public class CashRegister : MonoBehaviour
         {
             StartCoroutine(ResetInteraction());
         }
-    }
-
-    private DialogueData GetDialogueForCurrentDay()
-    {
-        if (playerInfo == null || nPCMovement == null) return null;
-
-        NPCdialogues npcDialogues = nPCMovement.GetComponent<NPCdialogues>();
-        if (npcDialogues == null || npcDialogues.dialogues == null) return null;
-
-        int dayIndex = playerInfo.days;
-
-        if (dayIndex >= 0 && dayIndex < npcDialogues.dialogues.Length)
-        {
-            return npcDialogues.dialogues[dayIndex].dialogue;
-        }
-
-        return null;
     }
 
     private void OnDialogueEnd()

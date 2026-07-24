@@ -122,28 +122,44 @@ public class DialogueModule : SoundsModule
     {
         foreach (DialogueLine line in dialogue.lines)
         {
-            if (whoComponent != null) whoComponent.text = line.speakerName;
-
-            bool isPlayer = line.speakerName == "Player"; 
-            
-            Image activeImage = isPlayer ? playerImage : otherImage;
-            Image inactiveImage = isPlayer ? otherImage : playerImage;
-
-            if (line.speakerSprite != null && activeImage != null)
+            if (line.isNarrator)
             {
-                activeImage.sprite = line.speakerSprite;
+                if (playerCanvas != null) playerCanvas.SetActive(false);
+                if (otherCanvas != null) otherCanvas.SetActive(false);
+                
+                if (whoComponent != null) whoComponent.text = string.IsNullOrEmpty(line.speakerName) ? "" : line.speakerName;
             }
+            else
+            {
+                if (playerCanvas != null) playerCanvas.SetActive(true);
+                if (otherCanvas != null) otherCanvas.SetActive(true);
 
-            AnimateCharacter(activeImage, scaleSpeaking, colorSpeaking, ref (isPlayer ? ref playerScaleCoroutine : ref otherScaleCoroutine));
-            AnimateCharacter(inactiveImage, scaleNormal, colorNormal, ref (isPlayer ? ref otherScaleCoroutine : ref playerScaleCoroutine));
+                if (whoComponent != null) whoComponent.text = line.speakerName;
+
+                bool isPlayer = line.speakerName == "Player"; 
+                
+                Image activeImage = isPlayer ? playerImage : otherImage;
+                Image inactiveImage = isPlayer ? otherImage : playerImage;
+
+                if (line.speakerSprite != null && activeImage != null)
+                {
+                    activeImage.sprite = line.speakerSprite;
+                }
+
+                AnimateCharacter(activeImage, scaleSpeaking, colorSpeaking, ref (isPlayer ? ref playerScaleCoroutine : ref otherScaleCoroutine));
+                AnimateCharacter(inactiveImage, scaleNormal, colorNormal, ref (isPlayer ? ref otherScaleCoroutine : ref playerScaleCoroutine));
+            }
 
             yield return StartCoroutine(DisplayLineWithPagination(line.text));
         }
 
         if (dialogueCanvas != null) dialogueCanvas.SetActive(false);
 
-        AnimateCharacter(playerImage, scaleNormal, colorNormal, ref playerScaleCoroutine);
-        AnimateCharacter(otherImage, scaleNormal, colorNormal, ref otherScaleCoroutine);
+        if (playerCanvas != null && playerCanvas.activeSelf)
+            AnimateCharacter(playerImage, scaleNormal, colorNormal, ref playerScaleCoroutine);
+            
+        if (otherCanvas != null && otherCanvas.activeSelf)
+            AnimateCharacter(otherImage, scaleNormal, colorNormal, ref otherScaleCoroutine);
 
         if (bgFadeCoroutine != null) StopCoroutine(bgFadeCoroutine);
         yield return StartCoroutine(FadeBackground(0f));
