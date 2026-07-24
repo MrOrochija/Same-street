@@ -23079,7 +23079,7 @@ Canvas:
   m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -34240,8 +34240,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 306a73d9e4548614a8cb80e3d1cd044b, type: 2}
-  m_sharedMaterial: {fileID: 2823098684140348260, guid: 306a73d9e4548614a8cb80e3d1cd044b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c59a0356c42b7d340b833edb929daebd, type: 2}
+  m_sharedMaterial: {fileID: 5127254477577391916, guid: c59a0356c42b7d340b833edb929daebd, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -34265,8 +34265,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 18
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -40052,10 +40052,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Player
+  m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 306a73d9e4548614a8cb80e3d1cd044b, type: 2}
-  m_sharedMaterial: {fileID: 2823098684140348260, guid: 306a73d9e4548614a8cb80e3d1cd044b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c59a0356c42b7d340b833edb929daebd, type: 2}
+  m_sharedMaterial: {fileID: 5127254477577391916, guid: c59a0356c42b7d340b833edb929daebd, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -40079,8 +40079,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 22
+  m_fontSizeBase: 22
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
