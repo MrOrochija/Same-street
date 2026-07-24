@@ -21,36 +21,87 @@ public class NPCStore : MonoBehaviour
 
     public List<NumberGroup> allowedGroups;
 
-    public GameObject[] NPC;
+    private GameObject NPCS;
+    private GameObject usedNPC;
     private GameObject spawn;
+
+    public PlayerInfo playerInfo;
+
+    public float spawnDelay = 3f;
+    private float spawnTimer = 0f;
+    private bool isWaitingToSpawn = false;
+
+    private GameObject currentSpawnedNPC;
+    private GameObject currentTemplateNPC;
 
     void Start()
     {
         Transform spawnTransform = transform.Find("Spawn");
+        Transform usedNPCTransform = transform.Find("Used");
+        Transform NPCSTransform = transform.Find("NPC");
 
-        if (spawnTransform != null)
+        if (spawnTransform != null) spawn = spawnTransform.gameObject;
+        if (usedNPCTransform != null) usedNPC = usedNPCTransform.gameObject;
+        if (NPCSTransform != null) NPCS = NPCSTransform.gameObject;
+    }
+
+    void Update()
+    {
+        if (playerInfo != null && playerInfo.GetInStore())
         {
-            spawn = spawnTransform.gameObject;
-            SpawnRandomNPC();
+            if (currentSpawnedNPC == null)
+            {
+                if (currentTemplateNPC != null)
+                {
+                    currentTemplateNPC.transform.SetParent(usedNPC.transform);
+                    currentTemplateNPC = null;
+                }
+
+                if (!isWaitingToSpawn)
+                {
+                    isWaitingToSpawn = true;
+                    spawnTimer = spawnDelay;
+                }
+                else
+                {
+                    spawnTimer -= Time.deltaTime;
+
+                    if (spawnTimer <= 0)
+                    {
+                        SpawnRandomNPC();
+                        isWaitingToSpawn = false;
+                    }
+                }
+            }
         }
     }
 
     public void SpawnRandomNPC()
     {
-        if (spawn == null || NPC.Length == 0) return;
+        if (spawn == null || NPCS == null || usedNPC == null) return;
 
-        int randomIndex = Random.Range(0, NPC.Length);
+        int availableNPCs = NPCS.transform.childCount;
 
-        GameObject randomNPC = Instantiate(
-            NPC[randomIndex], 
+        if (availableNPCs == 0)
+        {
+            Debug.Log("все NPC закончились");
+            return;
+        }
+
+        int randomIndex = Random.Range(0, availableNPCs);
+        
+        currentTemplateNPC = NPCS.transform.GetChild(randomIndex).gameObject;
+
+        currentSpawnedNPC = Instantiate(
+            currentTemplateNPC, 
             spawn.transform.position, 
             spawn.transform.rotation, 
             transform
         );
 
-        randomNPC.SetActive(true);
+        currentSpawnedNPC.SetActive(true);
 
-        NPCMovement movement = randomNPC.GetComponent<NPCMovement>();
+        NPCMovement movement = currentSpawnedNPC.GetComponent<NPCMovement>();
         if (movement != null)
         {
             movement.Init(allowedGroups, transform);

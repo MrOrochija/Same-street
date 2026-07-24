@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerInfo : MonoBehaviour
 {
     private int days = 0;
-    private bool canSleep = true;
+    private bool canSleep = false;
     [HideInInspector] public bool inStore = false;
 
     public int GetDays()
@@ -24,5 +24,15 @@ public class PlayerInfo : MonoBehaviour
     public bool GetCanSleep()
     {
         return canSleep;
+    }
+
+    public void SetInStore(bool value)
+    {
+        inStore = value;
+    }
+
+    public bool GetInStore()
+    {
+        return inStore;
     }
 }

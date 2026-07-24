@@ -13,6 +13,19 @@ MonoBehaviour:
   m_Name: 0day
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
-  - speakerName: Girl
+  - speakerName: Zuki
     speakerSprite: {fileID: -3021237919097622816, guid: 8b83878f9a97cf44da6856a7022d0aa2, type: 3}
-    text: "\u041F\u0440\u0438\u0432\u0435\u0442! \u044D\u0442\u043E 0 \u0434\u0435\u043D\u044C"
+    text: ...
+    isNarrator: 0
+  - speakerName: Player
+    speakerSprite: {fileID: -6535718206531406139, guid: 06fdfd053eca4b54db118ee618099550, type: 3}
+    text: ...
+    isNarrator: 0
+  - speakerName: Zuki
+    speakerSprite: {fileID: -3021237919097622816, guid: 8b83878f9a97cf44da6856a7022d0aa2, type: 3}
+    text: What?
+    isNarrator: 0
+  - speakerName: Player
+    speakerSprite: {fileID: -6535718206531406139, guid: 06fdfd053eca4b54db118ee618099550, type: 3}
+    text: Nothing.
+    isNarrator: 0
