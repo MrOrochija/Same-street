@@ -38,9 +38,9 @@ public class Bed : MonoBehaviour
 
     private void Update()
     {
-        if (playerInfo.canSleep && isPlayerInside && !isInteracting && Keyboard.current != null)
+        if (playerInfo != null && playerInfo.canSleep && isPlayerInside && !isInteracting && Keyboard.current != null)
         {
-            if (Keyboard.current.eKey.wasPressedThisFrame && playerInfo != null)
+            if (Keyboard.current.eKey.wasPressedThisFrame)
             {
                 StartCoroutine(InteractionRoutine());
             }
