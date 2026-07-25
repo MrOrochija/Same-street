@@ -84,7 +84,8 @@ public class NPCStore : MonoBehaviour
 
         if (availableNPCs == 0)
         {
-            Debug.Log("все NPC закончились");
+            playerInfo.SetInStore(false);
+            Debug.Log(1);
             return;
         }
 

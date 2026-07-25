@@ -2,16 +2,30 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering.Universal;
 
 public class TriggerMarket : MonoBehaviour
 {
+    public bool toStore;
     public Image fadeImage;
     public GameObject exitPos;
+    public GameObject door;
+    public GameObject NPC;
+    public GameObject usedNPC;
+    public Light2D mainLight;
+    public Light2D playerLight;
+    public GameObject yaniNeko;
+    private Animator anim;
     private PlayerMovement playerMovement;
     private PlayerInfo playerInfo;
     
     private bool isPlayerInside = false;
     private bool isInteracting = false;
+
+    void Start()
+    {
+        if (door != null) anim = door.GetComponent<Animator>();
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -38,17 +52,23 @@ public class TriggerMarket : MonoBehaviour
 
     private void Update()
     {
-        if (!playerInfo.inStore && isPlayerInside && !isInteracting && Keyboard.current != null)
+        if (playerInfo != null)
         {
-            if (Keyboard.current.eKey.wasPressedThisFrame)
+            if (toStore && playerInfo.GetCanSleep()) return;
+
+            if (!playerInfo.GetInStore() && isPlayerInside && !isInteracting && Keyboard.current != null)
             {
-                StartCoroutine(InteractionRoutine());
+                if (Keyboard.current.eKey.wasPressedThisFrame)
+                {
+                    StartCoroutine(InteractionRoutine());
+                }
             }
         }
     }
 
     private IEnumerator InteractionRoutine()
     {
+        if (anim != null) anim.SetBool("isOpen", true);
         isInteracting = true;
 
         PlayerMovement localPlayer = playerMovement;
@@ -67,7 +87,30 @@ public class TriggerMarket : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
 
+        if (anim != null) anim.SetBool("isOpen", false);
+
         yield return StartCoroutine(FadeModule.FadeRoutine(fadeImage, 0f));
+
+        if (!toStore)
+        {
+            playerInfo.SetInStore(false);
+            playerInfo.SetCanSleep(true);
+            yaniNeko.SetActive(false);
+
+            LightModule.ChangeLight(this, LightTrigger.LightingMode.SetDark, mainLight, playerLight);
+
+            if (usedNPC != null && NPC != null)
+            {
+                for (int i = usedNPC.transform.childCount - 1; i >= 0; i--)
+                {
+                    usedNPC.transform.GetChild(i).SetParent(NPC.transform, false);
+                }
+            }
+        } 
+        else 
+        {
+            playerInfo.SetInStore(true);
+        }
 
         if (localPlayer != null)
         {
@@ -75,7 +118,7 @@ public class TriggerMarket : MonoBehaviour
         }
 
         isInteracting = false;
-        
+
         if (!isPlayerInside)
         {
             playerMovement = null;

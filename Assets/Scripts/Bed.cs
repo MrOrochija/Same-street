@@ -2,10 +2,14 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering.Universal;
 
 public class Bed : MonoBehaviour
 {
     public Image fadeImage;
+    public Light2D mainLight;
+    public Light2D playerLight;
+    public GameObject yaniNeko;
     private PlayerInfo playerInfo;
     private PlayerMovement playerMovement;
     
@@ -58,10 +62,14 @@ public class Bed : MonoBehaviour
 
         yield return StartCoroutine(FadeModule.FadeRoutine(fadeImage, 1f));
 
+        LightModule.ChangeLight(this, LightTrigger.LightingMode.SetSunny, mainLight, playerLight);
+
         yield return new WaitForSeconds(1f);
 
-        Debug.Log($"день: {playerInfo.GetDays()}");
+        playerInfo.SetCanSleep(false);
+        yaniNeko.SetActive(true);
         playerInfo.AddDay();
+        Debug.Log($"день: {playerInfo.GetDays()}");
 
         yield return StartCoroutine(FadeModule.FadeRoutine(fadeImage, 0f));
 

@@ -6,7 +6,6 @@ public class DeleteNPC : MonoBehaviour
     {
         if (other.CompareTag("NPC"))
         {
-            Debug.Log(1);
             Destroy(other.gameObject);
         }
     }

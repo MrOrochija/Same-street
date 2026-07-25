@@ -17,7 +17,7 @@ public class CashRegisterOther : MonoBehaviour
     {
         if (other.CompareTag("NPC"))
         {
-            cashRegister.isOtherInside = true;
+            cashRegister.isOtherInside = false;
             cashRegister.nPCMovement = null;
         }
     }
