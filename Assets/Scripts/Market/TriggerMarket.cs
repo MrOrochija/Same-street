@@ -95,9 +95,6 @@ public class TriggerMarket : MonoBehaviour
         {
             playerInfo.SetInStore(false);
             playerInfo.SetCanSleep(true);
-            yaniNeko.SetActive(false);
-
-            LightModule.ChangeLight(this, LightTrigger.LightingMode.SetDark, mainLight, playerLight);
 
             if (usedNPC != null && NPC != null)
             {
@@ -105,6 +102,18 @@ public class TriggerMarket : MonoBehaviour
                 {
                     usedNPC.transform.GetChild(i).SetParent(NPC.transform, false);
                 }
+            }
+            
+            int j = playerInfo.GetDays();
+            if (j == 0)
+            {
+                yaniNeko.SetActive(false);
+                LightModule.ChangeLight(this, LightTrigger.LightingMode.SetDark, mainLight, playerLight);
+            } 
+            else if (j == 1)
+            {
+                yaniNeko.SetActive(false);
+                LightModule.ChangeLight(this, LightTrigger.LightingMode.SetDark, mainLight, playerLight);
             }
         } 
         else 
