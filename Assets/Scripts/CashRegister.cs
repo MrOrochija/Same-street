@@ -37,7 +37,9 @@ public class CashRegister : MonoBehaviour
 
     private void Update()
     {
-        if (!cooldown && isPlayerInside && isOtherInside && !isInteracting && Keyboard.current != null)
+        if (Keyboard.current == null && cooldown) return;
+
+        if (playerMovement != null && !playerMovement.hasBox && isPlayerInside && isOtherInside && !isInteracting)
         {
             if (Keyboard.current.eKey.wasPressedThisFrame)
             {
