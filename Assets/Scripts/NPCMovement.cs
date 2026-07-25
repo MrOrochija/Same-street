@@ -68,7 +68,7 @@ public class NPCMovement : MonoBehaviour
             transform.position = Vector3.MoveTowards(
                 transform.position, 
                 targetPosition, 
-                3f * Time.deltaTime
+                5f * Time.deltaTime
             );
         }
         else
@@ -145,7 +145,7 @@ public class NPCMovement : MonoBehaviour
         {
             if (currentTargetData.wait)
             {
-                yield return new WaitForSeconds(5f);
+                yield return new WaitForSeconds(4f);
             }
 
             if (currentTargetData.isPaused)

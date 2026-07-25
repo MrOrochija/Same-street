@@ -12,4 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48fdbf3537146a54d85e28845c879004, type: 3}
   m_Name: 0day
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
-  lines: []
+  lines:
+  - speakerName: Mell
+    speakerSprite: {fileID: 3739253253603831928, guid: b52e9d55518539942a75329df892a1d1, type: 3}
+    text: Do you have any plums?
+    isNarrator: 0
+  - speakerName: Mell
+    speakerSprite: {fileID: 3739253253603831928, guid: b52e9d55518539942a75329df892a1d1, type: 3}
+    text: Or a watermelon?
+    isNarrator: 0
+  - speakerName: Player
+    speakerSprite: {fileID: -6535718206531406139, guid: 06fdfd053eca4b54db118ee618099550, type: 3}
+    text: Yeah...
+    isNarrator: 0
+  - speakerName: Player
+    speakerSprite: {fileID: -6535718206531406139, guid: 06fdfd053eca4b54db118ee618099550, type: 3}
+    text: We have all of this in our store.
+    isNarrator: 0
+  - speakerName: Mell
+    speakerSprite: {fileID: 3739253253603831928, guid: b52e9d55518539942a75329df892a1d1, type: 3}
+    text: "I'M ALREADY BLUSHING\u2014THIS ISN'T GOING TO BE CIVILIZED!"
+    isNarrator: 0

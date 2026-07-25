@@ -10,6 +10,7 @@ public class Bed : MonoBehaviour
     public Light2D mainLight;
     public Light2D playerLight;
     public GameObject yaniNeko;
+    public LampModule lampModule;
     private PlayerInfo playerInfo;
     private PlayerMovement playerMovement;
     
@@ -63,6 +64,7 @@ public class Bed : MonoBehaviour
         yield return StartCoroutine(FadeModule.FadeRoutine(fadeImage, 1f));
 
         LightModule.ChangeLight(this, LightTrigger.LightingMode.SetSunny, mainLight, playerLight);
+        lampModule.Deactivate();
 
         yield return new WaitForSeconds(1f);
 

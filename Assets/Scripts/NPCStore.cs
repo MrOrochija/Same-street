@@ -85,7 +85,6 @@ public class NPCStore : MonoBehaviour
         if (availableNPCs == 0)
         {
             playerInfo.SetInStore(false);
-            Debug.Log(1);
             return;
         }
 

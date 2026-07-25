@@ -43,7 +43,7 @@ MonoBehaviour:
     isNarrator: 0
   - speakerName: YaniNeko
     speakerSprite: {fileID: 632301620031758097, guid: 2c128a3ac8144904b9453a89a0202e8b, type: 3}
-    text: Nice to meet you, I'm {Name}.
+    text: Nice to meet you, I'm YaniNeko.
     isNarrator: 0
   - speakerName: YaniNeko
     speakerSprite: {fileID: 632301620031758097, guid: 2c128a3ac8144904b9453a89a0202e8b, type: 3}

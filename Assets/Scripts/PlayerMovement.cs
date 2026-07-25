@@ -10,13 +10,15 @@ public class PlayerMovement : SoundsModule
     public PlayerState currentState = PlayerState.Free;
     public event Action OnDrawAnimationFinished;
 
+    [HideInInspector] public bool hasBox = false;
+
     private Animator anim;
     private Rigidbody2D rb;
     
-    private string lastDirection = "down"; 
     private float stepTimer = 0f;
 
     private Vector2 movementInput;
+    private Vector2 lastNonZeroMovement = new Vector2(0, -1);
     private float currentSpeed;
     private bool isRunning;
 
@@ -28,11 +30,14 @@ public class PlayerMovement : SoundsModule
 
     void Update()
     {
-        if (currentState != PlayerState.Free)
+       if (currentState != PlayerState.Free)
         {
-            anim.SetBool("isMoving", false);
             HandleStepSound(false, false, false);
             movementInput = Vector2.zero;
+        
+            anim.SetFloat("moveX", 0f);
+            anim.SetFloat("moveY", 0f);
+        
             return; 
         }
 
@@ -65,17 +70,18 @@ public class PlayerMovement : SoundsModule
         currentSpeed = isRunning ? 10f : 5f;
 
         bool isMoving = movementInput.magnitude > 0.01f;
-        anim.SetBool("isMoving", isMoving);
 
-        string oldDirection = lastDirection;
-
+        Vector2 oldDirection = lastNonZeroMovement;
         if (isMoving)
         {
-            DetermineLastPressedKey(movementInput);
-            SetAnimation();
+            lastNonZeroMovement = movementInput;
         }
 
-        bool directionChanged = isMoving && (lastDirection != oldDirection);
+        anim.SetFloat("moveX", movementInput.x);
+        anim.SetFloat("moveY", movementInput.y);
+        anim.SetBool("hasBox", hasBox);
+
+        bool directionChanged = isMoving && (lastNonZeroMovement != oldDirection);
         HandleStepSound(isMoving, isRunning, directionChanged);
     }
 
@@ -88,7 +94,6 @@ public class PlayerMovement : SoundsModule
         }
 
         Vector2 targetVelocity = movementInput * currentSpeed;
-        
         Vector2 velocityChange = targetVelocity - rb.linearVelocity;
         
         rb.AddForce(velocityChange, ForceMode2D.Impulse);
@@ -135,27 +140,5 @@ public class PlayerMovement : SoundsModule
         anim.SetBool("isDraw", false);
         currentState = PlayerState.Free; 
         OnDrawAnimationFinished?.Invoke(); 
-    }
-
-    void DetermineLastPressedKey(Vector2 moveInput)
-    {
-        if (Mathf.Abs(moveInput.x) > Mathf.Abs(moveInput.y))
-        {
-            if (moveInput.x > 0) lastDirection = "right";
-            if (moveInput.x < 0) lastDirection = "left";
-        }
-        else
-        {
-            if (moveInput.y > 0) lastDirection = "up";
-            if (moveInput.y < 0) lastDirection = "down";
-        }
-    }
-
-    void SetAnimation()
-    {
-        anim.SetBool("isLeft", lastDirection == "left");
-        anim.SetBool("isRight", lastDirection == "right");
-        anim.SetBool("isUp", lastDirection == "up");
-        anim.SetBool("isDown", lastDirection == "down");
     }
 }

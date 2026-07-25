@@ -15,6 +15,7 @@ public class TriggerMarket : MonoBehaviour
     public Light2D mainLight;
     public Light2D playerLight;
     public GameObject yaniNeko;
+    public LampModule lampModule;
     private Animator anim;
     private PlayerMovement playerMovement;
     private PlayerInfo playerInfo;
@@ -109,11 +110,19 @@ public class TriggerMarket : MonoBehaviour
             {
                 yaniNeko.SetActive(false);
                 LightModule.ChangeLight(this, LightTrigger.LightingMode.SetDark, mainLight, playerLight);
+                lampModule.Activate();
             } 
             else if (j == 1)
             {
                 yaniNeko.SetActive(false);
                 LightModule.ChangeLight(this, LightTrigger.LightingMode.SetDark, mainLight, playerLight);
+                lampModule.Activate();
+            }
+            else if (j == 2)
+            {
+                yaniNeko.SetActive(false);
+                LightModule.ChangeLight(this, LightTrigger.LightingMode.SetDark, mainLight, playerLight);
+                lampModule.Activate();
             }
         } 
         else 

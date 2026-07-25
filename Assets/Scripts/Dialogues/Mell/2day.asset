@@ -10,24 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 48fdbf3537146a54d85e28845c879004, type: 3}
-  m_Name: 1day
+  m_Name: 2day
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
-  - speakerName: Player
-    speakerSprite: {fileID: -6535718206531406139, guid: 06fdfd053eca4b54db118ee618099550, type: 3}
-    text: '*Damn, he''s back again.*'
-    isNarrator: 0
   - speakerName: Mell
     speakerSprite: {fileID: 3739253253603831928, guid: b52e9d55518539942a75329df892a1d1, type: 3}
-    text: Give me 5 million dollars - no
-    isNarrator: 0
-  - speakerName: Player
-    speakerSprite: {fileID: -6535718206531406139, guid: 06fdfd053eca4b54db118ee618099550, type: 3}
-    text: Bro, what are you talking about...
-    isNarrator: 0
-  - speakerName: Mell
-    speakerSprite: {fileID: 3739253253603831928, guid: b52e9d55518539942a75329df892a1d1, type: 3}
-    text: Do you have a banana??
+    text: ...
     isNarrator: 0
   - speakerName: Player
     speakerSprite: {fileID: -6535718206531406139, guid: 06fdfd053eca4b54db118ee618099550, type: 3}
@@ -35,5 +23,9 @@ MonoBehaviour:
     isNarrator: 0
   - speakerName: Mell
     speakerSprite: {fileID: 3739253253603831928, guid: b52e9d55518539942a75329df892a1d1, type: 3}
-    text: ...
+    text: Sorrel?
+    isNarrator: 0
+  - speakerName: Player
+    speakerSprite: {fileID: -6535718206531406139, guid: 06fdfd053eca4b54db118ee618099550, type: 3}
+    text: GET THE FUCK OUT OF HERE!
     isNarrator: 0
