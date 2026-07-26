@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerInfo : MonoBehaviour
 {
-    private int days = 5;
+    private int days = 0;
     private bool canSleep = false;
     private bool inStore = false;
     private bool music = true;
