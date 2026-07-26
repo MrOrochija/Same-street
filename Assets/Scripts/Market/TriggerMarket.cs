@@ -73,9 +73,9 @@ public class TriggerMarket : MonoBehaviour
 
     private void Update()
     {
-        if (playerInfo != null)
+        if (playerInfo != null && playerMovement != null)
         {
-            if (toStore && playerInfo.GetCanSleep()) return;
+            if (toStore && playerInfo.GetCanSleep() && playerMovement.hasBox) return;
 
             if (!playerInfo.GetInStore() && isPlayerInside && !isInteracting && Keyboard.current != null)
             {
