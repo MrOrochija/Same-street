@@ -4,7 +4,7 @@ using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering.Universal;
 
-public class Bed : MonoBehaviour
+public class Bed : SoundsModule
 {
     public Image fadeImage;
     public Light2D mainLight;
@@ -68,8 +68,6 @@ public class Bed : MonoBehaviour
         LightModule.ChangeLight(this, LightTrigger.LightingMode.SetSunny, mainLight, playerLight);
         lampModule.Deactivate();
 
-        yield return new WaitForSeconds(1f);
-
         if (playerInfo.GetDays() == 5)
         {
             dialogueModule.OnDialogueFinished += OnDialogueEnd;
@@ -81,6 +79,9 @@ public class Bed : MonoBehaviour
             if (yaniNeko != null && playerInfo.GetDays() != 4) yaniNeko.SetActive(true);
             playerInfo.AddDay();
             Debug.Log($"день: {playerInfo.GetDays()}");
+            PlaySound(sounds[0]);
+
+            yield return new WaitForSeconds(1f);
 
             yield return StartCoroutine(FadeModule.FadeRoutine(fadeImage, 0f));
 

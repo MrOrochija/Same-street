@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
 
-public class CashRegister : MonoBehaviour
+public class CashRegister : SoundsModule
 {
     [SerializeField] private DialogueModule dialogueModule;
 
@@ -76,6 +76,8 @@ public class CashRegister : MonoBehaviour
         {
             dialogueModule.OnDialogueFinished -= OnDialogueEnd;
         }
+
+        PlaySound(sounds[0]);
 
         StartCoroutine(ResetInteraction());
     }
