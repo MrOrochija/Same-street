@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.AI;
 
 public class SoundTrigger : SoundsModule
 {
@@ -6,7 +7,16 @@ public class SoundTrigger : SoundsModule
     {
         if (other.CompareTag("Player"))
         {
-            PlaySound(sounds[0], 0.5f);
+            if (other.GetComponent<PlayerInfo>().GetMusic())
+            {
+                if (HasSound(1) && other.GetComponent<PlayerInfo>().GetCanSleep())
+                {
+                    PlayLoopSound(sounds[1], 0.25f);
+                    return;
+                }
+            
+                PlayLoopSound(sounds[0], 0.25f);
+            }
         }
     }
 
@@ -14,7 +24,12 @@ public class SoundTrigger : SoundsModule
     {
         if (other.CompareTag("Player"))
         {
-            StopSound();
+            if (other.GetComponent<PlayerInfo>().GetMusic()) StopSound();            
         }
+    }
+
+    private bool HasSound(int index)
+    {
+        return sounds != null && index >= 0 && index < sounds.Length && sounds[index] != null;
     }
 }

@@ -8,7 +8,6 @@ public enum PlayerState { Free, Combat, Frozen }
 public class PlayerMovement : SoundsModule
 {
     public PlayerState currentState = PlayerState.Free;
-    public event Action OnDrawAnimationFinished;
 
     [HideInInspector] public bool hasBox = false;
 
@@ -125,20 +124,5 @@ public class PlayerMovement : SoundsModule
             }
             stepTimer = 0f;
         }
-    }
-
-    public IEnumerator DrawAnimation()
-    {
-        currentState = PlayerState.Frozen; 
-        anim.SetBool("isDraw", true);
-
-        yield return new WaitForSeconds(0.1f); 
-
-        float animationLength = anim.GetCurrentAnimatorStateInfo(0).length;
-        yield return new WaitForSeconds(animationLength - 0.1f);
-
-        anim.SetBool("isDraw", false);
-        currentState = PlayerState.Free; 
-        OnDrawAnimationFinished?.Invoke(); 
     }
 }

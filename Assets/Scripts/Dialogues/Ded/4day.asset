@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48fdbf3537146a54d85e28845c879004, type: 3}
+  m_Name: 4day
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  lines:
+  - speakerName: Anton
+    speakerSprite: {fileID: 5334759464859404885, guid: 5f3615ec09ce3cc4394a17803e5c15fd, type: 3}
+    text: Want some advice?
+    isNarrator: 0
+  - speakerName: Player
+    speakerSprite: {fileID: -6535718206531406139, guid: 06fdfd053eca4b54db118ee618099550, type: 3}
+    text: Yes!
+    isNarrator: 0
+  - speakerName: Anton
+    speakerSprite: {fileID: 5334759464859404885, guid: 5f3615ec09ce3cc4394a17803e5c15fd, type: 3}
+    text: Forgive people sooner.
+    isNarrator: 0

@@ -69,7 +69,7 @@ public class Bed : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         playerInfo.SetCanSleep(false);
-        yaniNeko.SetActive(true);
+        if (yaniNeko != null) yaniNeko.SetActive(true);
         playerInfo.AddDay();
         Debug.Log($"день: {playerInfo.GetDays()}");
 

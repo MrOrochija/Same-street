@@ -4,7 +4,8 @@ public class PlayerInfo : MonoBehaviour
 {
     private int days = 0;
     private bool canSleep = false;
-    [HideInInspector] public bool inStore = false;
+    private bool inStore = false;
+    private bool music = true;
 
     public int GetDays()
     {
@@ -34,5 +35,15 @@ public class PlayerInfo : MonoBehaviour
     public bool GetInStore()
     {
         return inStore;
+    }
+
+    public void SetMusic(bool value)
+    {
+        music = value;
+    }
+
+    public bool GetMusic()
+    {
+        return music;
     }
 }

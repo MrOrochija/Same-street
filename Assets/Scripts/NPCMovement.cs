@@ -15,7 +15,6 @@ public class NPCMovement : MonoBehaviour
     private NPCStore.NumberData currentTargetData;
 
     private Animator anim;
-    private string lastDirection = "down";
 
     private void Awake()
     {
@@ -34,7 +33,11 @@ public class NPCMovement : MonoBehaviour
     public void PauseMovement()
     {
         isPaused = true;
-        if (anim != null) anim.SetBool("isMoving", false);
+        if (anim != null)
+        {
+            anim.SetFloat("moveX", 0f);
+            anim.SetFloat("moveY", 0f);
+        }
     }
 
     public void ResumeMovement()
@@ -46,7 +49,11 @@ public class NPCMovement : MonoBehaviour
     {
         if (isPaused || isWaiting || currentTargetTransform == null)
         {
-            if (anim != null) anim.SetBool("isMoving", false);
+            if (anim != null)
+            {
+                anim.SetFloat("moveX", 0f);
+                anim.SetFloat("moveY", 0f);
+            }
             return;
         }
 
@@ -61,9 +68,13 @@ public class NPCMovement : MonoBehaviour
 
         if (distance >= 0.05f)
         {
-            DetermineDirection(directionVector);
-            SetAnimation();
-            if (anim != null) anim.SetBool("isMoving", true);
+            Vector2 moveDir = directionVector.normalized;
+            
+            if (anim != null)
+            {
+                anim.SetFloat("moveX", moveDir.x);
+                anim.SetFloat("moveY", moveDir.y);
+            }
 
             transform.position = Vector3.MoveTowards(
                 transform.position, 
@@ -73,33 +84,13 @@ public class NPCMovement : MonoBehaviour
         }
         else
         {
-            if (anim != null) anim.SetBool("isMoving", false);
+            if (anim != null)
+            {
+                anim.SetFloat("moveX", 0f);
+                anim.SetFloat("moveY", 0f);
+            }
             StartCoroutine(ProcessArrival());
         }
-    }
-
-    private void DetermineDirection(Vector2 moveInput)
-    {
-        if (Mathf.Abs(moveInput.x) > Mathf.Abs(moveInput.y))
-        {
-            if (moveInput.x > 0) lastDirection = "right";
-            else if (moveInput.x < 0) lastDirection = "left";
-        }
-        else
-        {
-            if (moveInput.y > 0) lastDirection = "up";
-            else if (moveInput.y < 0) lastDirection = "down";
-        }
-    }
-
-    private void SetAnimation()
-    {
-        if (anim == null) return;
-
-        anim.SetBool("isLeft", lastDirection == "left");
-        anim.SetBool("isRight", lastDirection == "right");
-        anim.SetBool("isUp", lastDirection == "up");
-        anim.SetBool("isDown", lastDirection == "down");
     }
 
     private void MoveToNextTarget()
@@ -139,13 +130,17 @@ public class NPCMovement : MonoBehaviour
     private IEnumerator ProcessArrival()
     {
         isWaiting = true;
-        if (anim != null) anim.SetBool("isMoving", false);
+        if (anim != null)
+        {
+            anim.SetFloat("moveX", 0f);
+            anim.SetFloat("moveY", 0f);
+        }
 
         if (currentTargetData != null)
         {
             if (currentTargetData.wait)
             {
-                yield return new WaitForSeconds(4f);
+                yield return new WaitForSeconds(3f);
             }
 
             if (currentTargetData.isPaused)

@@ -16,6 +16,12 @@ public class TriggerMarket : MonoBehaviour
     public Light2D playerLight;
     public GameObject yaniNeko;
     public LampModule lampModule;
+    public GameObject market;
+    public GameObject house;
+    private Sprite marketSprite;
+    private Sprite houseSprite;
+    public Sprite oldMarket;
+    public Sprite oldHouse;
     private Animator anim;
     private PlayerMovement playerMovement;
     private PlayerInfo playerInfo;
@@ -26,6 +32,18 @@ public class TriggerMarket : MonoBehaviour
     void Start()
     {
         if (door != null) anim = door.GetComponent<Animator>();
+
+        if (market != null)
+        {
+            SpriteRenderer sr = market.GetComponent<SpriteRenderer>();
+            if (sr != null) marketSprite = sr.sprite;
+        }
+
+        if (house != null)
+        {
+            SpriteRenderer sr = house.GetComponent<SpriteRenderer>();
+            if (sr != null) houseSprite = sr.sprite;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -81,6 +99,8 @@ public class TriggerMarket : MonoBehaviour
 
         yield return StartCoroutine(FadeModule.FadeRoutine(fadeImage, 1f));
 
+        if (!toStore) playerInfo.SetCanSleep(true);
+
         if (localPlayer != null && exitPos != null)
         {
             localPlayer.gameObject.transform.position = exitPos.transform.position;
@@ -95,15 +115,6 @@ public class TriggerMarket : MonoBehaviour
         if (!toStore)
         {
             playerInfo.SetInStore(false);
-            playerInfo.SetCanSleep(true);
-
-            if (usedNPC != null && NPC != null)
-            {
-                for (int i = usedNPC.transform.childCount - 1; i >= 0; i--)
-                {
-                    usedNPC.transform.GetChild(i).SetParent(NPC.transform, false);
-                }
-            }
             
             int j = playerInfo.GetDays();
             if (j == 0)
@@ -123,6 +134,47 @@ public class TriggerMarket : MonoBehaviour
                 yaniNeko.SetActive(false);
                 LightModule.ChangeLight(this, LightTrigger.LightingMode.SetDark, mainLight, playerLight);
                 lampModule.Activate();
+
+                Transform mellTransform = usedNPC.transform.Find("Mell");
+
+                if (mellTransform != null) Destroy(mellTransform.gameObject);
+            }
+            else if (j == 3)
+            {
+                yaniNeko.SetActive(false);
+                LightModule.ChangeLight(this, LightTrigger.LightingMode.SetDark, mainLight, playerLight);
+                lampModule.Activate();
+            }
+            else if (j == 4)
+            {
+                yaniNeko.SetActive(false);
+                LightModule.ChangeLight(this, LightTrigger.LightingMode.SetDark, mainLight, playerLight);
+                lampModule.Activate();
+            }
+            else if (j == 5)
+            {
+                yaniNeko.SetActive(false);
+                LightModule.ChangeLight(this, LightTrigger.LightingMode.SetDark, mainLight, playerLight);
+                lampModule.Activate();
+
+                if (market != null && oldMarket != null)
+                {
+                    SpriteRenderer sr = market.GetComponent<SpriteRenderer>();
+                    if (sr != null) sr.sprite = oldMarket;
+                }
+                if (house != null && oldHouse != null)
+                {
+                    SpriteRenderer sr = house.GetComponent<SpriteRenderer>();
+                    if (sr != null) sr.sprite = oldHouse;
+                }
+            }
+
+            if (usedNPC != null && NPC != null)
+            {
+                for (int i = usedNPC.transform.childCount - 1; i >= 0; i--)
+                {
+                    usedNPC.transform.GetChild(i).SetParent(NPC.transform, false);
+                }
             }
         } 
         else 

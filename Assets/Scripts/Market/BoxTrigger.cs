@@ -31,7 +31,6 @@ public class BoxTrigger : MonoBehaviour
             if (Keyboard.current.eKey.wasPressedThisFrame)
             {
                 playerMovement.hasBox = !playerMovement.hasBox;
-                Debug.Log(playerMovement.hasBox);
             }
         }
     }
