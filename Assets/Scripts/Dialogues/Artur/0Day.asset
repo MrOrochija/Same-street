@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48fdbf3537146a54d85e28845c879004, type: 3}
+  m_Name: 0Day
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  lines:
+  - speakerName: Artur
+    speakerSprite: {fileID: 3211710811241180148, guid: 8ae687a695ac78a468c115a4141714f7, type: 3}
+    text: Hi.
+    isNarrator: 0
+  - speakerName: Player
+    speakerSprite: {fileID: -6535718206531406139, guid: 06fdfd053eca4b54db118ee618099550, type: 3}
+    text: Hi.
+    isNarrator: 0
+  - speakerName: Artur
+    speakerSprite: {fileID: 3211710811241180148, guid: 8ae687a695ac78a468c115a4141714f7, type: 3}
+    text: How's work going for you today?
+    isNarrator: 0
+  - speakerName: Player
+    speakerSprite: {fileID: -6535718206531406139, guid: 06fdfd053eca4b54db118ee618099550, type: 3}
+    text: good.
+    isNarrator: 0
+  - speakerName: Artur
+    speakerSprite: {fileID: 3211710811241180148, guid: 8ae687a695ac78a468c115a4141714f7, type: 3}
+    text: Bye.
+    isNarrator: 0
+  - speakerName: Player
+    speakerSprite: {fileID: -6535718206531406139, guid: 06fdfd053eca4b54db118ee618099550, type: 3}
+    text: Bye.
+    isNarrator: 0
