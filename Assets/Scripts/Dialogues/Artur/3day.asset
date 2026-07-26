@@ -10,18 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 48fdbf3537146a54d85e28845c879004, type: 3}
-  m_Name: 1day
+  m_Name: 3day
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
-  - speakerName: Tom
-    speakerSprite: {fileID: 3438050096062440685, guid: d31ee402238eb2d469c67dd1f9d85d54, type: 3}
-    text: If you find a mushroom with white spots in the forest, don't eat it.
+  - speakerName: Player
+    speakerSprite: {fileID: -6535718206531406139, guid: 06fdfd053eca4b54db118ee618099550, type: 3}
+    text: Hello, Artur!
     isNarrator: 0
-  - speakerName: Tom
-    speakerSprite: {fileID: 3438050096062440685, guid: d31ee402238eb2d469c67dd1f9d85d54, type: 3}
-    text: It's poisonous.
+  - speakerName: Artur
+    speakerSprite: {fileID: 3211710811241180148, guid: 8ae687a695ac78a468c115a4141714f7, type: 3}
+    text: Hello.
     isNarrator: 0
   - speakerName: Player
     speakerSprite: {fileID: -6535718206531406139, guid: 06fdfd053eca4b54db118ee618099550, type: 3}
-    text: Thank you, okay.
+    text: Bye, Artur!
+    isNarrator: 0
+  - speakerName: Artur
+    speakerSprite: {fileID: 3211710811241180148, guid: 8ae687a695ac78a468c115a4141714f7, type: 3}
+    text: Bye.
     isNarrator: 0

@@ -12,4 +12,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48fdbf3537146a54d85e28845c879004, type: 3}
   m_Name: 3day
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
-  lines: []
+  lines:
+  - speakerName: Player
+    speakerSprite: {fileID: -6535718206531406139, guid: 06fdfd053eca4b54db118ee618099550, type: 3}
+    text: Hi!
+    isNarrator: 0
+  - speakerName: Tom
+    speakerSprite: {fileID: 3438050096062440685, guid: d31ee402238eb2d469c67dd1f9d85d54, type: 3}
+    text: Hi!
+    isNarrator: 0
+  - speakerName: Tom
+    speakerSprite: {fileID: 3438050096062440685, guid: d31ee402238eb2d469c67dd1f9d85d54, type: 3}
+    text: By the way, I heard today that some guy is robbing stores.
+    isNarrator: 0
+  - speakerName: Tom
+    speakerSprite: {fileID: 3438050096062440685, guid: d31ee402238eb2d469c67dd1f9d85d54, type: 3}
+    text: So please be careful.
+    isNarrator: 0
+  - speakerName: Player
+    speakerSprite: {fileID: -6535718206531406139, guid: 06fdfd053eca4b54db118ee618099550, type: 3}
+    text: Thank you for letting me know!
+    isNarrator: 0
+  - speakerName: Player
+    speakerSprite: {fileID: -6535718206531406139, guid: 06fdfd053eca4b54db118ee618099550, type: 3}
+    text: Bye!
+    isNarrator: 0
+  - speakerName: Tom
+    speakerSprite: {fileID: 3438050096062440685, guid: d31ee402238eb2d469c67dd1f9d85d54, type: 3}
+    text: Bye.
+    isNarrator: 0

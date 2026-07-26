@@ -12,4 +12,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48fdbf3537146a54d85e28845c879004, type: 3}
   m_Name: 4day
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
-  lines: []
+  lines:
+  - speakerName: Player
+    speakerSprite: {fileID: -6535718206531406139, guid: 06fdfd053eca4b54db118ee618099550, type: 3}
+    text: Hey!
+    isNarrator: 0
+  - speakerName: Player
+    speakerSprite: {fileID: -6535718206531406139, guid: 06fdfd053eca4b54db118ee618099550, type: 3}
+    text: Tom!
+    isNarrator: 0
+  - speakerName: Tom
+    speakerSprite: {fileID: 3438050096062440685, guid: d31ee402238eb2d469c67dd1f9d85d54, type: 3}
+    text: What do you need?
+    isNarrator: 0
+  - speakerName: Player
+    speakerSprite: {fileID: -6535718206531406139, guid: 06fdfd053eca4b54db118ee618099550, type: 3}
+    text: Would you like to go mushroom hunting together sometime?
+    isNarrator: 0
+  - speakerName: Tom
+    speakerSprite: {fileID: 3438050096062440685, guid: d31ee402238eb2d469c67dd1f9d85d54, type: 3}
+    text: Come on!
+    isNarrator: 0
+  - speakerName: Tom
+    speakerSprite: {fileID: 3438050096062440685, guid: d31ee402238eb2d469c67dd1f9d85d54, type: 3}
+    text: I'd be more than happy to
+    isNarrator: 0
+  - speakerName: Tom
+    speakerSprite: {fileID: 3438050096062440685, guid: d31ee402238eb2d469c67dd1f9d85d54, type: 3}
+    text: How about tomorrow?
+    isNarrator: 0
+  - speakerName: Player
+    speakerSprite: {fileID: -6535718206531406139, guid: 06fdfd053eca4b54db118ee618099550, type: 3}
+    text: Okay.
+    isNarrator: 0
+  - speakerName: Player
+    speakerSprite: {fileID: -6535718206531406139, guid: 06fdfd053eca4b54db118ee618099550, type: 3}
+    text: Bye!
+    isNarrator: 0
+  - speakerName: Tom
+    speakerSprite: {fileID: 3438050096062440685, guid: d31ee402238eb2d469c67dd1f9d85d54, type: 3}
+    text: Bye!
+    isNarrator: 0

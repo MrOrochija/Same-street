@@ -24815,6 +24815,9 @@ MonoBehaviour:
   dialogues:
   - dialogue: {fileID: 11400000, guid: 1b24bf5f3d4cb174f9ed17d641ac7abe, type: 2}
   - dialogue: {fileID: 11400000, guid: 44249ffc7695e994ab48e149a46e1587, type: 2}
+  - dialogue: {fileID: 11400000, guid: 54c312b832bd96a48944451cd5e52dc8, type: 2}
+  - dialogue: {fileID: 11400000, guid: 2add19d81a5412546bed5bd069065164, type: 2}
+  - dialogue: {fileID: 11400000, guid: 506628a0c68d00040bf89d94f28dceb7, type: 2}
 --- !u!114 &380197022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67450,7 +67453,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a189d06504c546145ae4b5a5adb5475d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCdialogues
-  dialogues: []
+  dialogues:
+  - dialogue: {fileID: 11400000, guid: 4d58da3f64d4f3f4e975624cc87ad2fc, type: 2}
+  - dialogue: {fileID: 11400000, guid: 6aa9d861a63f6e447b2f2df4e47187af, type: 2}
+  - dialogue: {fileID: 11400000, guid: c635d699c2db72c4995a7f3ea644eb89, type: 2}
+  - dialogue: {fileID: 11400000, guid: 61b7dee7fc245a1459b882c55c29eeed, type: 2}
+  - dialogue: {fileID: 11400000, guid: 328132ed2b0f3dc47abea2d311698e3d, type: 2}
+  - dialogue: {fileID: 11400000, guid: ffb698c7cb75e4442966e437e633ffe2, type: 2}
 --- !u!114 &2007471114
 MonoBehaviour:
   m_ObjectHideFlags: 0
