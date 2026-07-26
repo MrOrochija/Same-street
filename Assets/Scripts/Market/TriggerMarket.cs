@@ -205,5 +205,7 @@ public class TriggerMarket : MonoBehaviour
         {
             playerMovement = null;
         }
+
+        if (playerInfo.GetDays() == 5) Destroy(gameObject);
     }
 }
