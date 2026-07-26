@@ -10,7 +10,6 @@ public class MenuSystem : MonoBehaviour
     private Canvas guideCanvas;
     private Canvas menuCanvas;
     public TMP_Text text;
-    private Canvas settingCanvas;
     private Canvas backgroundCanvas;
 
     private bool playPressed = false;
@@ -30,7 +29,6 @@ public class MenuSystem : MonoBehaviour
         Transform backgroundCanvasTransform = transform.Find("Background");
 
         if (guideCanvasTransform != null) guideCanvas = guideCanvasTransform.GetComponent<Canvas>();
-        if (settingCanvasTransform != null) settingCanvas = settingCanvasTransform.GetComponent<Canvas>();
         if (backgroundCanvasTransform != null) backgroundCanvas = backgroundCanvasTransform.GetComponent<Canvas>();
 
         if (menuCanvasTransform != null)
@@ -43,10 +41,6 @@ public class MenuSystem : MonoBehaviour
                 if (btn.name == "Play")
                 {
                     btn.onClick.AddListener(OnPlayButtonClicked);
-                }
-                else if (btn.name == "Settings")
-                {
-                    btn.onClick.AddListener(OnSettingsButtonClicked);
                 }
                 else if (btn.name == "Quit")
                 {
@@ -65,7 +59,6 @@ public class MenuSystem : MonoBehaviour
             if (Keyboard.current.escapeKey.wasPressedThisFrame)
             {
                 SetMenuVisible(!isOpen);
-                if (settingCanvas != null) settingCanvas.gameObject.SetActive(false);
             }
             
         }
@@ -76,11 +69,6 @@ public class MenuSystem : MonoBehaviour
         playPressed = true;
         text.text = "Resume";
         SetMenuVisible(false);
-    }
-
-    public void OnSettingsButtonClicked()
-    {
-        settingCanvas.gameObject.SetActive(true);
     }
 
     public void OnQuitButtonClicked()
