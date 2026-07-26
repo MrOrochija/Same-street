@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering.Universal;
+using Unity.VisualScripting;
 
 public class TriggerMarket : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class TriggerMarket : MonoBehaviour
     private Sprite houseSprite;
     public Sprite oldMarket;
     public Sprite oldHouse;
+    public GameObject trigger;
     private Animator anim;
     private PlayerMovement playerMovement;
     private PlayerInfo playerInfo;
@@ -99,22 +101,10 @@ public class TriggerMarket : MonoBehaviour
 
         yield return StartCoroutine(FadeModule.FadeRoutine(fadeImage, 1f));
 
-        if (!toStore) playerInfo.SetCanSleep(true);
-
-        if (localPlayer != null && exitPos != null)
-        {
-            localPlayer.gameObject.transform.position = exitPos.transform.position;
-        }
-
-        yield return new WaitForSeconds(1f);
-
-        if (anim != null) anim.SetBool("isOpen", false);
-
-        yield return StartCoroutine(FadeModule.FadeRoutine(fadeImage, 0f));
-
         if (!toStore)
         {
             playerInfo.SetInStore(false);
+            playerInfo.SetCanSleep(true);
             
             int j = playerInfo.GetDays();
             if (j == 0)
@@ -144,12 +134,20 @@ public class TriggerMarket : MonoBehaviour
                 yaniNeko.SetActive(false);
                 LightModule.ChangeLight(this, LightTrigger.LightingMode.SetDark, mainLight, playerLight);
                 lampModule.Activate();
+
+                Transform yuiTransform = usedNPC.transform.Find("NPCgirl2");
+
+                if (yuiTransform != null) Destroy(yuiTransform.gameObject);
             }
             else if (j == 4)
             {
                 yaniNeko.SetActive(false);
                 LightModule.ChangeLight(this, LightTrigger.LightingMode.SetDark, mainLight, playerLight);
                 lampModule.Activate();
+                
+                Transform tomTransform = usedNPC.transform.Find("Tom");
+
+                if (tomTransform != null) Destroy(tomTransform.gameObject);
             }
             else if (j == 5)
             {
@@ -159,6 +157,7 @@ public class TriggerMarket : MonoBehaviour
 
                 if (market != null && oldMarket != null)
                 {
+                    Destroy(market.GetComponent<Animator>());
                     SpriteRenderer sr = market.GetComponent<SpriteRenderer>();
                     if (sr != null) sr.sprite = oldMarket;
                 }
@@ -167,6 +166,8 @@ public class TriggerMarket : MonoBehaviour
                     SpriteRenderer sr = house.GetComponent<SpriteRenderer>();
                     if (sr != null) sr.sprite = oldHouse;
                 }
+
+                if (trigger != null) trigger.SetActive(true);
             }
 
             if (usedNPC != null && NPC != null)
@@ -181,6 +182,17 @@ public class TriggerMarket : MonoBehaviour
         {
             playerInfo.SetInStore(true);
         }
+
+        if (localPlayer != null && exitPos != null)
+        {
+            localPlayer.gameObject.transform.position = exitPos.transform.position;
+        }
+
+        yield return new WaitForSeconds(1f);
+
+        if (anim != null) anim.SetBool("isOpen", false);
+
+        yield return StartCoroutine(FadeModule.FadeRoutine(fadeImage, 0f));
 
         if (localPlayer != null)
         {

@@ -156,4 +156,9 @@ public class NPCMovement : MonoBehaviour
 
         MoveToNextTarget();
     }
+
+    public void SetIsPaused(bool value)
+    {
+        isPaused = value;
+    }
 }

@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48fdbf3537146a54d85e28845c879004, type: 3}
+  m_Name: 5day
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  lines:
+  - speakerName: YaniNeko
+    speakerSprite: {fileID: 632301620031758097, guid: 2c128a3ac8144904b9453a89a0202e8b, type: 3}
+    text: So?
+    isNarrator: 0
+  - speakerName: YaniNeko
+    speakerSprite: {fileID: 632301620031758097, guid: 2c128a3ac8144904b9453a89a0202e8b, type: 3}
+    text: "Don't you feel like fewer and fewer of your \u201Cfriends\u201D are showing
+      up every day?"
+    isNarrator: 0
+  - speakerName: YaniNeko
+    speakerSprite: {fileID: -878159273675008974, guid: 2c128a3ac8144904b9453a89a0202e8b, type: 3}
+    text: This world is getting older every day, but you haven't changed.
+    isNarrator: 0
+  - speakerName: YaniNeko
+    speakerSprite: {fileID: -878159273675008974, guid: 2c128a3ac8144904b9453a89a0202e8b, type: 3}
+    text: Over and over again.
+    isNarrator: 0
+  - speakerName: YaniNeko
+    speakerSprite: {fileID: 632301620031758097, guid: 2c128a3ac8144904b9453a89a0202e8b, type: 3}
+    text: You wake up.
+    isNarrator: 0
+  - speakerName: YaniNeko
+    speakerSprite: {fileID: 632301620031758097, guid: 2c128a3ac8144904b9453a89a0202e8b, type: 3}
+    text: And off you go to work.
+    isNarrator: 0
+  - speakerName: YaniNeko
+    speakerSprite: {fileID: -878159273675008974, guid: 2c128a3ac8144904b9453a89a0202e8b, type: 3}
+    text: You wake up -> You go to work -> You go to sleep
+    isNarrator: 0
+  - speakerName: YaniNeko
+    speakerSprite: {fileID: -878159273675008974, guid: 2c128a3ac8144904b9453a89a0202e8b, type: 3}
+    text: Over and overa again.
+    isNarrator: 0
+  - speakerName: YaniNeko
+    speakerSprite: {fileID: 632301620031758097, guid: 2c128a3ac8144904b9453a89a0202e8b, type: 3}
+    text: Everyone else has already left, but you're still here.
+    isNarrator: 0
+  - speakerName: YaniNeko
+    speakerSprite: {fileID: -878159273675008974, guid: 2c128a3ac8144904b9453a89a0202e8b, type: 3}
+    text: Isn't your life boring?
+    isNarrator: 0
+  - speakerName: Player
+    speakerSprite: {fileID: -6535718206531406139, guid: 06fdfd053eca4b54db118ee618099550, type: 3}
+    text: ...
+    isNarrator: 0

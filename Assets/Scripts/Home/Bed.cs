@@ -11,6 +11,8 @@ public class Bed : MonoBehaviour
     public Light2D playerLight;
     public GameObject yaniNeko;
     public LampModule lampModule;
+    public DialogueModule dialogueModule;
+    public DialogueData dialogueData;
     private PlayerInfo playerInfo;
     private PlayerMovement playerMovement;
     
@@ -68,18 +70,31 @@ public class Bed : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
 
-        playerInfo.SetCanSleep(false);
-        if (yaniNeko != null) yaniNeko.SetActive(true);
-        playerInfo.AddDay();
-        Debug.Log($"день: {playerInfo.GetDays()}");
-
-        yield return StartCoroutine(FadeModule.FadeRoutine(fadeImage, 0f));
-
-        if (playerMovement != null)
+        if (playerInfo.GetDays() == 5)
         {
-            playerMovement.currentState = PlayerState.Free;
+            dialogueModule.OnDialogueFinished += OnDialogueEnd;
+            dialogueModule.StartDialogue(dialogueData);
         }
+        else
+        {
+            playerInfo.SetCanSleep(false);
+            if (yaniNeko != null && playerInfo.GetDays() != 4) yaniNeko.SetActive(true);
+            playerInfo.AddDay();
+            Debug.Log($"день: {playerInfo.GetDays()}");
 
-        isInteracting = false;
+            yield return StartCoroutine(FadeModule.FadeRoutine(fadeImage, 0f));
+
+            if (playerMovement != null)
+            {
+                playerMovement.currentState = PlayerState.Free;
+            }
+
+            isInteracting = false;
+        }
+    }
+
+    private void OnDialogueEnd()
+    {
+        Application.Quit();
     }
 }
